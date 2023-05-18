@@ -1,0 +1,7 @@
+package mapobjects;
+
+public enum Type {
+    SOLID, TRANSPARENT, BACKGROUND,
+    SOLID_DAMAGE, TRANSPARENT_DAMAGE,
+    SOLID_SLOW, TRANSPARENT_SLOW
+}
