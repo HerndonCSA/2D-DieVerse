@@ -1,22 +1,34 @@
 package weapons;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 
 public abstract class Bullet {
-    protected final int direction;
-    protected final Point position;
+    protected final double direction;
     protected BufferedImage image;
 
-    protected Bullet(int direction, Point position) {
-        this.direction = direction;
-        this.position = position;
+    protected final Point2D.Double position;
+    private int damage;
+    public int getDamage() {
+        return damage;
     }
+
+
+
+    protected Bullet(double direction, Point position, int damage) {
+        this.direction = direction;
+        this.position = new Point2D.Double(position.x, position.y);
+        this.damage = damage;
+    }
+
+    public abstract void tick();
+
 
     public abstract void render(Graphics2D graphics2D);
+    public abstract Rectangle2D bounds();
 
-    public void tick() {
-        position.x += Math.cos(Math.toRadians(direction));
-        position.y += Math.sin(Math.toRadians(direction));
-    }
+
+
 }

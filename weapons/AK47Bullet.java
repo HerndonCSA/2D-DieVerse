@@ -6,11 +6,11 @@ import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.IOException;
 
-public class PistolBullet extends Bullet {
+public class AK47Bullet extends Bullet {
     String imagePath = "weapons/pistol_bullet.png";
 
-    public PistolBullet(double direction, Point position) throws IOException {
-        super(direction, position, 10);
+    public AK47Bullet(double direction, Point position) throws IOException {
+        super(direction, position, 5);
         image = ImageIO.read(new File(imagePath));
     }
 
@@ -23,8 +23,8 @@ public class PistolBullet extends Bullet {
 
     @Override
     public void tick() {
-        position.x += Math.cos(direction) * 5;
-        position.y += Math.sin(direction) * 5;
+        position.x += Math.cos(direction) * 9;
+        position.y += Math.sin(direction) * 9;
     }
 
     @Override

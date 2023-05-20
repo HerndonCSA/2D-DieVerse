@@ -10,12 +10,12 @@ public class Display {
 
 	private JFrame frame;
 	private Canvas canvas;
-	
+
 	private final String title;
 	private final int width;
 	private final int height;
 	private Game game;
-	
+
 	public Display(String title, int width, int height, Game game) throws IOException {
 		this.title = title;
 		this.width = width;
@@ -23,7 +23,7 @@ public class Display {
 		this.game = game;
 		createDisplay();
 	}
-	
+
 	private void createDisplay() throws IOException {
 		frame = new JFrame(title);
 		frame.setSize(width, height);
@@ -33,12 +33,11 @@ public class Display {
 		frame.setVisible(true);
 		// icon is ./icon.png, set it
 
-
 		canvas = new Canvas();
 		canvas.setPreferredSize(new Dimension(width, height));
 		canvas.setMaximumSize(new Dimension(width, height));
 		canvas.setMinimumSize(new Dimension(width, height));
-		
+
 		frame.add(canvas);
 		frame.pack();
 	}

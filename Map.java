@@ -3,6 +3,7 @@ import mapobjects.Type;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.util.*;
 import java.util.List;
 
 public class Map {
@@ -74,6 +75,20 @@ public class Map {
             }
         }
         return true;
+    }
+
+    public List<Integer> bulletRemover(Rectangle2D[] bullets) {
+        // returns an array of the indexes of the bullets that need to be removed
+        // use canMove() to check if the bullet can move
+
+        List<Integer> indexes = new ArrayList<>();
+        for (int i = 0; i < bullets.length; i++) {
+            if(!canMove(bullets[i])) {
+                indexes.add(i);
+            }
+        }
+        return indexes;
+
     }
 
 }

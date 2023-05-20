@@ -1,8 +1,10 @@
 import mapobjects.ImageObject;
+import mapobjects.MapObject;
 import mapobjects.Material;
 import mapobjects.Type;
 import mapobjects.shapes.Rectangle;
 import mapobjects.shapes.Square;
+import weapons.AK47;
 import weapons.Pistol;
 
 import java.awt.*;
@@ -29,7 +31,10 @@ public class Game implements Runnable {
     private Map gameMap;
     private Player playerOne;
     private Player playerTwo;
+
     private boolean debug;
+
+    private final PlayerManager playerManager = PlayerManager.getInstance();
 
     public Game(String title, int width, int height, int refresh_rate) {
         this.width = width;
@@ -51,40 +56,41 @@ public class Game implements Runnable {
     private void init() throws IOException {
         display = new Display(title, width, height, this);
 
-        Rectangle rectangleOne = new Rectangle(new Point(400, 400), Type.SOLID, Color.BLACK, 50, 90);
-        ImageObject background = new ImageObject(new Point(0, 0), Type.BACKGROUND, "background.png");
+        MapObject bgM2 = new ImageObject(new Point (0, 50), Type.BACKGROUND, "images/castleBg2M2.png");
 
-        Square squareOne = new Square(new Point(500, 500), Type.SOLID, Color.BLACK, 50);
-        // add ground, it is a rectangle that is 50 pixels wide and spans the entire width of the screen (use Launcher.WIDTH & Launcher.HEIGHT)
-        // rectangle is (Point, type, height, width in the order btw)
-        Rectangle ground = new Rectangle(new Point(0, Launcher.HEIGHT - 50), Type.SOLID, Color.BLACK, 50, Launcher.WIDTH);
+        MapObject castleFloor = new ImageObject(new Point (150, 340), Type.SOLID, "images/castleBrickRowGroundM2.png");
+        MapObject dungeonFloor = new ImageObject(new Point (0, 732), Type.SOLID, "images/dungeonGroundM2.png");
+        MapObject leftWallM2 = new ImageObject(new Point (0, 0), Type.SOLID, "images/wallM2.png");
+        MapObject rightWallM2 = new ImageObject(new Point (992, 0), Type.SOLID, "images/wallM2.png");
+        MapObject castleCeiling = new ImageObject(new Point (0, 0), Type.BACKGROUND, "images/castleBrickRowM2.png");
+        MapObject dungeonBgM2 = new ImageObject(new Point (0, 390), Type.BACKGROUND, "images/dungeonBgM2.png");
+        MapObject spawnM2P2 = new ImageObject(new Point (866, 663), Type.SOLID, "images/spawnM2.png");
+        MapObject spawnM2P1 = new ImageObject(new Point (8, 662), Type.SOLID, "images/spawnM2.png");
+        MapObject dlbM2 = new ImageObject(new Point (100, 665), Type.SOLID, "images/dungeonBlockM2.png");
+        MapObject dmbM2 = new ImageObject(new Point (430, 665), Type.SOLID, "images/dungeonBlockM2.png");
+        MapObject drbM2 = new ImageObject(new Point (770, 665), Type.SOLID, "images/rightBlockM2.png");
+        MapObject platform1M2 = new ImageObject(new Point (255, 610), Type.SOLID, "images/platformM2.png");
+        MapObject platform2M2 = new ImageObject(new Point (620, 610), Type.SOLID, "images/platformM2.png");
+        MapObject platform3M2 = new ImageObject(new Point (108, 525), Type.SOLID, "images/platformM2.png");
+        MapObject platform4M2 = new ImageObject(new Point (769, 525), Type.SOLID, "images/platformM2.png");
+        MapObject platform5M2 = new ImageObject(new Point (-50, 445), Type.SOLID, "images/platformM2.png");
+        MapObject platform6M2 = new ImageObject(new Point (920, 445), Type.SOLID, "images/platformM2.png");
 
-        Square[] stares = new Square[15];
-        for (int i = 0; i < stares.length; i++) {
-            stares[i] = new Square(new Point(100 + i * 50, 100 + i * 50), Type.SOLID, Color.BLACK, 60);
-        }
-        // add all the shapes to the map
-
-        Square[] stairs2 = new Square[5];
-        // starts a little higher than halfway from the stairs, but faces the other way
-        for (int i = 0; i < stairs2.length; i++) {
-            stairs2[i] = new Square(new Point(100 + i * 50, 100 + i * 50), Type.SOLID, Color.BLACK, 60);
-        }
-
-
-
-
+        MapObject pillarPlatform1M2 = new ImageObject(new Point (100, 388), Type.SOLID, "images/pillarPlatformM2.png");
+        MapObject pillarPlatform2M2 = new ImageObject(new Point (840, 388), Type.SOLID, "images/pillarPlatformM2.png");
 
         // use listOf method to add all the shapes to the map
 
-        gameMap = new Map(List.of(background, ground, stares[0], stares[1], stares[2], stares[3], stares[4], stares[5], stares[6], stares[7], stares[8], stares[9], stares[10], stares[11], stares[12], stares[13], stares[14]
-        , stairs2[0], stairs2[1], stairs2[2], stairs2[3], stairs2[4]));
+        gameMap = new Map(List.of(bgM2, dungeonBgM2, castleFloor, dungeonFloor, castleCeiling, dlbM2, spawnM2P1, pillarPlatform1M2, pillarPlatform2M2,
+                spawnM2P2, dmbM2, drbM2, platform1M2, platform2M2, platform3M2, platform4M2, platform5M2, platform6M2, leftWallM2, rightWallM2));
 
-        playerOne = new Player(new Point(500, 0), "Player.jpg", true, gameMap, new Pistol());
-        playerTwo = new Player(new Point(700, 500), "Player.jpg", false, gameMap, new Pistol());
-
-        keyManager = new KeyManager(playerOne, playerTwo);
-
+        playerOne = new Player(new Point(500, 0), "images/Player1.jpg", 0, gameMap, new Pistol());
+        playerTwo = new Player(new Point(200, 300), "images/Player2.jpg", 1, gameMap, new AK47());
+        playerManager.addPlayer(playerOne);
+        playerManager.addPlayer(playerTwo);
+//
+        keyManager = new KeyManager();
+//
         display.getCanvas().addKeyListener(keyManager);
     }
 
@@ -94,7 +100,6 @@ public class Game implements Runnable {
         gameMap.tick();
 		playerOne.tick();
 		playerTwo.tick();
-
     }
 
     void debug(Graphics2D graphics) {
@@ -114,21 +119,21 @@ public class Game implements Runnable {
             return;
 
         }
-
-
         graphics = (Graphics2D) bufferStrategy.getDrawGraphics();
 
         graphics.clearRect(0, 0, width, height);
+
+
         gameMap.render(graphics);
-		playerOne.render(graphics, playerTwo);
-		playerTwo.render(graphics, playerOne);
+		playerOne.render(graphics);
+		playerTwo.render(graphics);
+        // tag game: draw tag score at top left corner below debug in large font
         if (debug) debug(graphics);
         // Show the buffer and dispose of the graphics object
         bufferStrategy.show();
         graphics.dispose();
 
     }
-
     private Color interpolateColors(Color start, Color end, float progress) {
         int r = (int) (start.getRed() * (1 - progress) + end.getRed() * progress);
         int g = (int) (start.getGreen() * (1 - progress) + end.getGreen() * progress);

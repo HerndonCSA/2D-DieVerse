@@ -10,27 +10,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e1654-f21e-4ef1-b878-d07d03cb3716" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GAME_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2D-DieVerse.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KeyManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MapIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlayerStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mapobjects/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mapobjects/shapes/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weapons/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weapons/Gun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weapons/Pistol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weapons/PistolBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Block.pixil" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emoji.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Block.pixil" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/KeyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/KeyManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Player.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Player1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/Player2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/emoji.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/redBlock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/Bullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/Gun.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/Gun.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/Pistol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/Pistol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/PistolBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2D-DieVerse/weapons/PistolBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/2D-DieVerse/wood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redBlock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weapons/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/weapons/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weapons/Gun.java" beforeDir="false" afterPath="$PROJECT_DIR$/weapons/Gun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weapons/Pistol.java" beforeDir="false" afterPath="$PROJECT_DIR$/weapons/Pistol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weapons/PistolBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/weapons/PistolBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wood.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +75,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/soos/Documents/GitHub/GAME&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -71,6 +86,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Launcher" />
@@ -151,7 +171,21 @@
       <workItem from="1684419969872" duration="3048000" />
       <workItem from="1684425291252" duration="1758000" />
       <workItem from="1684433792048" duration="550000" />
-      <workItem from="1684434353111" duration="2038000" />
+      <workItem from="1684434353111" duration="6713000" />
+      <workItem from="1684443954510" duration="558000" />
+      <workItem from="1684445565091" duration="118000" />
+      <workItem from="1684445750386" duration="1441000" />
+      <workItem from="1684453029337" duration="1308000" />
+      <workItem from="1684457981143" duration="1906000" />
+      <workItem from="1684497206414" duration="3612000" />
+      <workItem from="1684503575436" duration="122000" />
+      <workItem from="1684504854662" duration="4405000" />
+      <workItem from="1684522239357" duration="508000" />
+      <workItem from="1684523170021" duration="1447000" />
+      <workItem from="1684530115865" duration="2011000" />
+      <workItem from="1684544913249" duration="610000" />
+      <workItem from="1684587645572" duration="2454000" />
+      <workItem from="1684590740356" duration="1664000" />
     </task>
     <servers />
   </component>
